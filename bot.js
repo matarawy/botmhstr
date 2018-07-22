@@ -283,7 +283,7 @@ client.on('guildCreate', guild => {
   New Server Add Speed Bot ✅
 اسم السيرفر: ${guild.name}
 صاحب السيرفر: ${guild.owner}**`);
-client.channels.get("467833183254347797").sendEmbed(embed)
+client.channels.get("469670940725215253").sendEmbed(embed)
 });
 
 client.on('guildDelete', guild => {
@@ -295,7 +295,7 @@ client.on('guildDelete', guild => {
   Server Kicked Speed Bot :cry:
 اسم السيرفر: ${guild.name}
 صاحب السيرفر: ${guild.owner}**`);
-client.channels.get("467833183254347797").sendEmbed(embed)
+client.channels.get("469670940725215253").sendEmbed(embed)
 });
  
 
