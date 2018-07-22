@@ -2391,7 +2391,6 @@ client.on("message", (message) => {
     }
 });  
 
-// THIS  MUST  BE  THIS  WAY
 const sWlc = {}
 const premium = ['463781827086254083', '', '', '']
 client.on('message', message => {
@@ -2437,7 +2436,7 @@ client.on("guildMemberAdd", member => {
       var Canvas = require('canvas')
       var jimp = require('jimp')
       
-      const w = ['./PicsArt_07-17-07.58.02 (1).png'];
+      const w = ['./model/PicsArt_07-17-07.58.02 (1).png'];
       
               let Image = Canvas.Image,
                   canvas = new Canvas(557, 241),
@@ -2492,8 +2491,6 @@ client.on("guildMemberAdd", member => {
       
       }
       });
-
-
 
 
 // THIS  MUST  BE  THIS  WAY
