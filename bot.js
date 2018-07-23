@@ -200,8 +200,8 @@ client.on("message", message => {
 『!support/سيرفر الدعم』
 『!contacارسال اقتراح او لمراسلة صاحب البوت』
 **
-
-        ***__Music orders__***
+`)
+ (`       ***__Music orders__***
 **
 『${prefix}play / لتشغيل أغنية برآبط أو بأسم』
 『${prefix}skip / لتجآوز الأغنية الحآلية』
@@ -239,9 +239,9 @@ client.on("message", message => {
 『!delet <name> / مسح الشات او الرووم فويس』
 『❖!ccolors <number> / ينشا لك الوان مع كم الوان تبي』
 **
-
-
-        ***__Games orders__***
+`)
+  
+(`     ***__Games orders__***
  **       
 『!rps / حجر ورقة مقص』
 『!speed / اسرع كتابة』
