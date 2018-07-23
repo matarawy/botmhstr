@@ -26,7 +26,40 @@ const sql = require("sqlite");
  const pretty = require('pretty-ms') 
 ,ti={}  
 ,spee={};
+client.on('message',function(message) {
+  if(!message.channel.guild) return;
 
+const prefix = "!";
+    if (message.content === prefix + "discrim") {
+let messageArray = message.content.split(" ");
+let args = messageArray.slice(1);
+
+if (message.author.bot) return;
+
+var discri = args[0]
+let discrim
+if(discri){
+discrim = discri;
+}else{
+discrim = message.author.discriminator;
+}
+if(discrim.length == 1){
+discrim = "000"+discrim
+}
+if(discrim.length == 2){
+discrim = "00"+discrim
+}
+if(discrim.length == 3){
+discrim = "0"+discrim
+}
+
+const users = client.users.filter(user => user.discriminator === discrim).map(user => user.username);
+return message.channel.send(`
+**Found ${users.length} users with the discriminator #${discrim}**
+${users.join('\n')}
+`);
+}
+});
 
 
 let bane = JSON.parse(fs.readFileSync("./bcer.json", "utf8"));
@@ -138,6 +171,7 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 ❖!bans ~ عدد الاشخاص المبندة 
 ❖!avatar ~ صورتك او صورة الي تمنشنو
 ❖!embed ~ يكرر الي تقولو بشكل حلو
+❖!discrim ~كود يضهر لك الاشخاص نفس تاقك
 ❖!emoji <any things> ~ لتحويل اي كلمه تقولها الي ايموجي
 ❖!inv ~ لدعوة البوت الى سيرفرك
 ❖!support ~ سيرفر الدعم
