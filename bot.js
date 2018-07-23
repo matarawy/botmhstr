@@ -192,17 +192,17 @@ client.on('message', message => {
     }
 });
 client.on("message", message => {
- if (message.content === "!help") {
-  const embed = new Discord.RichEmbed() 
-      .setColor("#ffff00")
-      .setThumbnail(message.author.avatarURL)
-      .setDescription(`
+    if (message.content === (prefix + "help")) {
+     const embed = new Discord.RichEmbed() 
+         .setColor("#580e6b")
+         .setThumbnail(message.author.avatarURL)
+         .setDescription(`
 
 ***__وصف عن البوت__***
 **
- البوت مصنوع من قبل None
-البوت فيه كثير ميزات حلوة و جميلة
-
+:gem:  البوت فيه كثير ميزات حلوة و جميلة
+:shield:يحتوي البوت على مضاد جحفله   
+ ا:rocket: لبوت يعمل 24 ساعه
 **
 
         ***__General orders__***
@@ -294,15 +294,20 @@ client.on("message", message => {
 『!فوائد ونصائح  / هل تعلم』
 『!يعطيك عقابات قاسية / عقاب 』
 **
-   
-        
 `)
-
-
-message.author.sendEmbed(embed)
-
-}
-}); 
+   message.author.sendEmbed(embed)
+   
+   }
+   });  
+client.on('message', message => {
+     if (message.content === (prefix + "help")) {
+     let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor("#8650a7")
+  .addField("Done" , " تــــم ارســالك في الخــاص")
+  message.channel.sendEmbed(embed);
+    }
+});
 client.on('message', msg => {
 	var prefix = "!";
   if (msg.author.bot) return;
