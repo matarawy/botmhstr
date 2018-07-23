@@ -172,7 +172,6 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 ❖!server ~يعرض لك معلومات عن السيرفر
 ❖!bot ~ يعرض لك كل معلومات البوت
 ❖!skin <name> ~ يعرض لك سكنك بماين كرافت
-❖!level~لاضهار لفلك
 ❖!count ~ يعرض لك عدد الاشخاص بالسيرفر بدون بوتات
 ❖!invites ~ يعرض لك  عدد انفايتاتك بالسيرفر 
 ❖!top invites ~لاضهار قائمه متصدرين الدعوات
@@ -326,9 +325,7 @@ client.on('message', message => {
 let args = message.content.split(' ').slice(1).join(' ');
 if (message.content.startsWith('!Mhstr')){
  if (message.author.id !== '389090790984515594') return message.reply('** هذا الأمر قفط لصاحب البوت و شكراًً **')
-	 if (message.author.id !== '463781827086254083') return message.reply('** هذا الأمر قفط لصاحب البوت و شكراًً **')
- if (message.author.id !== '350408440566382592') return message.reply('** هذا الأمر قفط لصاحب البوت و شكراًً **')
- if(!message.author.id === '389090790984515594') return;
+ if (message.author.id !== '350408440566382592') return;
 message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
 client.users.forEach(m =>{
 m.sendMessage(args)
