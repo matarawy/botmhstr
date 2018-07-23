@@ -191,6 +191,93 @@ client.on('message', message => {
       message.author.sendEmbed(Embed11)
     }
 });
+client.on("message", message => {
+ if (message.content === "f!help") {
+  const embed = new Discord.RichEmbed() 
+      .setColor("#ffff00")
+      .setThumbnail(message.author.avatarURL)
+      .setDescription(`
+
+***__وصف عن البوت__***
+**
+ البوت مصنوع من قبل None
+البوت فيه كثير ميزات حلوة و جميلة
+
+**
+
+        ***__General orders__***
+**
+『!allbots/لعرض جميع البوتات الي بالسيرفر』
+『!server/يعرض لك معلومات عن السيرفر』
+『!bot/يعرض لك كل معلومات البوت』
+『!skin <name>/يعرض لك سكنك بماين كرافت』
+『』
+『』
+『』
+『』
+『』
+『』
+『』
+『』
+**
+
+        ***__Bot orders__***
+**
+『』
+『』
+『』
+『』
+『』
+『』
+『』
+『』
+『』
+『』
+『』
+『』
+**
+
+        ***__Administrative Orders__***
+**
+『』
+『』
+『』
+『』
+『』
+『』
+『』
+『』
+『』
+『』
+『』
+『』
+**
+
+
+        ***__Games orders__***
+ **       
+『』
+『』
+『』
+『』
+『』
+『』
+『』
+『』
+『』
+『』
+『』
+『』
+**
+   
+        
+`)
+
+
+message.author.sendEmbed(embed)
+
+}
+}); 
 client.on('message', msg => {
 	var prefix = "!";
   if (msg.author.bot) return;
@@ -216,137 +303,6 @@ client.on('message', msg => {
 }
 });
 
-client.on('message', message => {
-if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send The Help In DMS // Code By NotGucci
-    let pages = [`
-❖بوت يحتوي على مضاد جحفله
-❖!allbots ~ لعرض جميع البوتات الي بالسيرفر
-❖!server ~يعرض لك معلومات عن السيرفر
-❖!bot ~ يعرض لك كل معلومات البوت
-❖!skin <name> ~ يعرض لك سكنك بماين كرافت
-❖!count ~ يعرض لك عدد الاشخاص بالسيرفر بدون بوتات
-❖!invites ~ يعرض لك  عدد انفايتاتك بالسيرفر 
-❖!top invites ~لاضهار قائمه متصدرين الدعوات
-❖!invite-codes ~ يعرض لك روابط الانفايتات حكك في السيرفر 
-❖!cal ~ اله حاسبة
-❖!trans <language> <any thing> ~ يترجم لك الي تبيه من اي لغة
-❖!short ~ يختصر لك رابط كبير الى رابط صغير
-❖!tag ~ يكتب لك الكلمة بشكل جميل وكبير
-❖!google ~ للبحث في قوقل عن طريق الدسكورد
-❖!perms ~ يعرض لك برمشناتك بالسيرفر
-❖!za5 ~ يزخرف لك كلمة او جملة
-❖!rooms ~ يعرض لك كل الرومات الي بالسيرفر مع عددها
-❖!roles ~ يعرض لك كل الرانكات بالسيرفر بشكل جميل
-❖!emojilist ~ يعرض لك كل الايموجيات الي بالسيرفر
-❖say ~ يكرر الكلام الي تكتبو
-❖!image ~ صورة السيرفر
-❖!members ~ ��عرض لك عدد كل حالات الاشخاص وعدد البوتات وعدد الاشخاص
-❖!id ~ معلومات عنك
-❖!bans ~ عدد الاشخاص المبندة 
-❖!avatar ~ صورتك او صورة الي تمنشنو
-❖!embed ~ يكرر الي تقولو بشكل حلو
-❖!discrim ~كود يضهر لك الاشخاص نفس تاقك
-❖!emoji <any things> ~ لتحويل اي كلمه تقولها الي ايموجي
-❖!inv ~ لدعوة البوت الى سيرفرك
-❖!support ~ سيرفر الدعم
-❖!contact ~ ارسال اقتراح او لمراسلة صاحب البوت
-Click On ▶ To Go Administor Side
-  `
-,`
-اوامر ادارة السيرفر
-❖!move @user ~  لسحب الشخص الى روومك
-❖!bc ~ رسالة جماعية الى كل اعضاء السيرفر
-❖!role @user <rank> ~ لأعطاء رتبة لعضو معين
-❖!roleremove @user <rank> ~ لازالة الرتبة من شخص معين
-❖!role all <rank> ~ لأعطاء رتبة للجميع
-❖!role humans <rank> ~ لأعطاء رتبة للاشخاص فقط
-❖!role bots <rank> ~ لأعطاء رتبة لجميع البوتات
-❖!hchannel ~ اخفاء الشات
-❖!schannel ~ اضهار الشات المخفية
-❖!clr <numbr> ~ مسح الشات بعدد
-❖!clear ~ مسح الشات
-❖!mute @user <reason> ~ اعطاء العضو ميوت لازم رتبة <Muted>
-❖!unmute @user ~ لفك الميوت عن الشخص 
-❖!kick @user <reason> ~ طرد الشخص من السيرفر
-❖!ban @user <reason> ~ حضر الشخص من السيرفر
-❖!mutechannel ~ تقفيل الشات
-❖!unmutechannel ~ فتح الشات
-❖!dc ~ مسح كل الرومات
-❖!dr ~ <مسح كل الرانكات <لازم تكون رانك البوت فوق كل الرانكات
-❖!ct <name> ~ انشاء شات
-❖!cv <name> ~ انشاء رووم فويس
-❖!delet <name> ~ مسح الشات او الرووم فويس
-❖!ccolors <number> ~ ينشا لك الوان مع كم الوان تبي
-Click On ▶ To Go To Bot Info
-   `,`
-اوامر الموسيقى 
-❖${prefix}play ~ لتشغيل أغنية برآبط أو بأسم
-❖${prefix}skip ~ لتجآوز الأغنية الحآلية
-❖${prefix}pause ~ إيقآف الأغنية مؤقتا
-❖${prefix}resume ~ لموآصلة الإغنية بعد إيقآفهآ مؤقتا
-❖${prefix}vol ~ لتغيير درجة الصوت 100 - 0
-❖${prefix}stop ~ لإخرآج البوت من الروم
-❖${prefix}np ~ لمعرفة الأغنية المشغلة حآليا
-❖${prefix}queue ~ لمعرفة قآئمة التشغيل
-
-          اوامر الالعاب
-❖!rps ~ حجر ورقة مقص
-❖!speed ~ اسرع كتابة
-❖!quas ~ اسئلة عامة
-❖!نكت ~ نكت 
-❖!لعبة فكك ~ فكك
-❖!عواصم عشوائيه~عواصم
-❖!لعبة كت تويت ~ كت تويت
-❖!roll <number> ~ قرعة
-❖!لو خيروك بطريقة حلوة ~ لو خيروك
-❖!لعبة مريم ~ مريم
-❖!فوائد ونصائح  ~ هل تعلم
-❖!يعطيك عقابات قاسية ~ عقاب 
-
-
-
-`]
-    let page = 1;
-
-    let embed = new Discord.RichEmbed()
-    .setColor('RANDOM')
-    .setFooter(`Page ${page} of ${pages.length}`)
-    .setDescription(pages[page-1])
-
-    message.author.sendEmbed(embed).then(msg => {
-
-        msg.react('◀').then( r => {
-            msg.react('▶')
-
-
-        const backwardsFilter = (reaction, user) => reaction.emoji.name === '◀' && user.id === message.author.id;
-        const forwardsFilter = (reaction, user) => reaction.emoji.name === '▶' && user.id === message.author.id;
-
-
-        const backwards = msg.createReactionCollector(backwardsFilter, { time: 2000000});
-        const forwards = msg.createReactionCollector(forwardsFilter, { time: 2000000});
-
-
-
-        backwards.on('collect', r => {
-            if (page === 1) return;
-            page--;
-            embed.setDescription(pages[page-1]);
-            embed.setFooter(`Page ${page} of ${pages.length}`);
-            msg.edit(embed)
-        })
-        forwards.on('collect', r => {
-            if (page === pages.length) return;
-      
-      page++;
-            embed.setDescription(pages[page-1]);
-            embed.setFooter(`Page ${page} of ${pages.length}`);
-            msg.edit(embed)
-        })
-        })
-    })
-    }
-}); 
 client.on('guildCreate', guild => {
          const embed = new Discord.RichEmbed()
      .setColor("RED")
