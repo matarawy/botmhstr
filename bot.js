@@ -2427,7 +2427,6 @@ client.on("guildMemberAdd", member => {
       });
 
 
-// THIS  MUST 
 const arraySort = require('array-sort'),
       table = require('table');
 
@@ -2452,6 +2451,6 @@ var prefix = "!";
 
     message.channel.send(embed)
     }
-}); BE  THIS  WAY
-
+});
+//MHSTR END NOW THIS IS END
 client.login(process.env.BOT_TOKEN);
