@@ -160,7 +160,7 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 **
 :gem:  البوت فيه كثير ميزات حلوة و جميلة
 :shield:يحتوي البوت على مضاد جحفله
- ا:rocket:
+ ا:rocket: البوت يعمل 24 ساعه 
 
 **
         ***__General orders__***
