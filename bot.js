@@ -28,6 +28,38 @@ const sql = require("sqlite");
 ,spee={};
 
 
+let points = JSON.parse(fs.readFileSync("./points.json", "utf8"));
+const prefix = "!";
+
+client.on("message", message => {
+  if (!message.content.startsWith(prefix)) return;
+  if (message.author.bot) return;
+
+  if (!points[message.author.id]) points[message.author.id] = {
+    points: 0,
+    level: 0
+  };
+  let userData = points[message.author.id];
+  userData.points++;
+
+  let curLevel = Math.floor(0.1 * Math.sqrt(userData.points));
+  if (curLevel > userData.level) {
+    // Level up!
+    userData.level = curLevel;
+     message.reply(`**لقد وصلت الى المستوى ${curLevel}**`).then(m => m.delete(100000));
+  }
+
+  if (message.content.startsWith(prefix + "level")) {
+    
+      message.reply(` ** انت في المستوى ${userData.level}  مع ${userData.points} نقاط . ** `).then(m => m.delete(100000));
+
+  }
+  fs.writeFile("./points.json", JSON.stringify(points), (err) => {
+    if (err) console.error(err)
+  });
+
+});
+
 
 let bane = JSON.parse(fs.readFileSync("./bcer.json", "utf8"));
 let banse = new Set();
@@ -92,6 +124,7 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 ❖!server ~يعرض لك معلومات عن السيرفر
 ❖!bot ~ يعرض لك كل معلومات البوت
 ❖!skin <name> ~ يعرض لك سكنك بماين كرافت
+❖!level~لاضهار لفلك
 ❖!count ~ يعرض لك عدد الاشخاص بالسيرفر بدون بوتات
 ❖!invites ~ يعرض لك  عدد انفايتاتك بالسيرفر 
 ❖!top invites ~لاضهار قائمه متصدرين الدعوات
