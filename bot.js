@@ -87,6 +87,45 @@ ${users.join('\n')}
     }
     
   })
+      const Slam = [
+        'هلا بيك',
+        'منور يا ولد',
+        'بنورك نفرح',
+        'يا هلا ',
+      ]
+      client.on('message', msg => {
+      if  (msg.content === 'هلا') {
+          const slamat = new Discord.RichEmbed()
+          .setDescription(`${Slam[Math.floor(Math.random() * Slam.length)]}`)
+          .setThumbnail(msg.author.avatarURL)
+          msg.channel.send(slamat);
+        }
+      });
+      const elslam = [
+        'و عليكم السلام',
+        'و عليكم السلام و رحمة الله',
+        'و عليكم السلام و رحمة الله و براكاته'
+      ]
+      client.on('message', msg => {
+      if  (msg.content === 'السلام عليكم') {
+          const slamat = new Discord.RichEmbed()
+          .setDescription(`${elslam[Math.floor(Math.random() * elslam.length)]}`)
+          .setThumbnail(msg.author.avatarURL)
+          msg.channel.send(slamat);
+        }
+        if  (msg.content === 'السلام عليكم و رحمة الله') {
+            const slamat = new Discord.RichEmbed()
+            .setDescription(`${elslam[Math.floor(Math.random() * elslam.length)]}`)
+            .setThumbnail(msg.author.avatarURL)
+            msg.channel.send(slamat);
+          }
+          if  (msg.content === 'السلام عليكم و رحمة الله و بركاته') {
+            const slamat = new Discord.RichEmbed()
+            .setDescription(`${elslam[Math.floor(Math.random() * elslam.length)]}`)
+            .setThumbnail(msg.author.avatarURL)
+            msg.channel.send(slamat);
+          }
+      });
 client.on('message', message => {
       if (!devs.includes(message.author.id)) return;
   if (message.content.startsWith(adminprefix + 'Morro')) {
