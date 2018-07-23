@@ -91,9 +91,9 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 ❖!server ~يعرض لك معلومات عن السيرفر
 ❖!bot ~ يعرض لك كل معلومات البوت
 ❖!skin <name> ~ يعرض لك سكنك بماين كرافت
-❖!top invites ~لاضهار قائمه متصدرين الدعوات
 ❖!count ~ يعرض لك عدد الاشخاص بالسيرفر بدون بوتات
 ❖!invites ~ يعرض لك  عدد انفايتاتك بالسيرفر 
+❖!top invites ~لاضهار قائمه متصدرين الدعوات
 ❖!invite-codes ~ يعرض لك روابط الانفايتات حكك في السيرفر 
 ❖!cal ~ اله حاسبة
 ❖!trans <language> <any thing> ~ يترجم لك الي تبيه من اي لغة
