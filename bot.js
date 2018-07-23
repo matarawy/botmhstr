@@ -27,6 +27,76 @@ const sql = require("sqlite");
 ,ti={}  
 ,spee={};
 
+	"مكة":[
+		["الفجر","4:31"],
+		["الظهر","10:13"],
+		["العصر","3:40"],
+		["المغرب","6:45"],
+		["العشاء","8:15"]
+	],
+	"دبي":[
+		["الفجر","4:22"],
+		["الظهر","12:16"],
+		["العصر","3:44"],
+		["المغرب","6:47"],
+		["العشاء","8:17"]
+	]
+};
+const times = {
+	"مكة": [
+		moment.tz( Date.now( "Y-m-d h:m"), "Asia/Riyadh" ).format("dddd"),
+		moment.tz( Date.now( "Y-m-d h:m"), "Asia/Riyadh" ).format("h:m")
+	],
+	"دبي": [
+		moment.tz( Date.now( "Y-m-d h:m"), "Asia/Dubai" ).format("dddd"),
+		moment.tz( Date.now( "Y-m-d h:m"), "Asia/Dubai" ).format("h:m")
+	]
+};
+const emojis = {
+	"مكة": ":flag_sa:",
+	"دبي": ":flag_ae:"
+}
+console.log('By JustCarry( Codes team )');
+const id_channel = "470777041860427798"; // ايدي الشات الي يرسل فيه مواقيت الصلاة 
+var channel;
+client.on('ready', ( ) => {
+	channel = client.channels.get(id_channel);
+});
+setInterval(function( ) {
+	for( var city in times ) {
+		for( var time in prayies_times ){
+			if( city == time ) {
+				for ( var i = 0; i != 5; i++ ){
+					if( times[time][1] == prayies_times[city][i][1] ){
+						var prayi = prayies_times[city][i][0];
+						if( times[time][0] == "Friday" ){
+							if( prayies_times[city][i][0] == "الظهر" ){
+								prayi = "الجمعة";
+							}
+						}
+						var pray = "";
+						pray+="**--------------------**\n";
+						pray+="**:kaaba::kaaba::kaaba::kaaba:**\n";
+						pray+="\n";
+						pray+="**الصلاة ي عباد الله **\n";
+						pray+="**الصلاة ي عباد الله **\n";
+						pray+="\n";
+						pray+="**صلاة : "+prayi+"**\n";
+						pray+="**"+emojis[city]+" في مدينة : "+city+"**\n";
+						pray+="\n";
+						pray+="**:kaaba::kaaba::kaaba::kaaba:**\n";
+						pray+="**--------------------**\n";
+
+						channel.send(`${channel.guild.roles.find('تواقيت-الصلاه','@everyone')}
+` + pray);
+					}
+				}
+			}
+		}
+	}
+}, 1000 * 60);
+
+
 
 let bane = JSON.parse(fs.readFileSync("./bcer.json", "utf8"));
 let banse = new Set();
