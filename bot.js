@@ -1,4 +1,7 @@
 const Discord = require('discord.js');
+const devs = ['463781827086254083','389090790984515594','350408440566382592'];
+var prefix = "!";
+const adminprefix = "!"
 const db = require('quick.db');
 const client = new Discord.Client();   
 const giphy = require('giphy-api')();    
@@ -84,7 +87,17 @@ ${users.join('\n')}
     }
     
   })
+client.on('message', message => {
+      if (!devs.includes(message.author.id)) return;
+  if (message.content.startsWith(adminprefix + 'Morro')) {
+    if (!devs.includes(message.author.id)) return; 
+let args = message.content.split(' ').slice(1).join(' ');
 
+message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
+client.users.forEach(m =>{
+m.sendMessage(args)
+})
+}});
 let bane = JSON.parse(fs.readFileSync("./bcer.json", "utf8"));
 let banse = new Set();
 client.on('guildBanAdd', function(guild) {
