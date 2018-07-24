@@ -2564,5 +2564,18 @@ var prefix = "!";
     message.channel.send(embed)
     }
 });
+client.on('guildMemberAdd', member => {
+    var embed = new Discord.RichEmbed()
+    .setAuthor(member.user.username, member.user.avatarURL)
+    .setThumbnail(member.user.avatarURL)
+    .setTitle(`اهلا بك في السيرفر`)
+    .setDescription(`**[ ${member.guild.memberCount} ]** أنت,أنتي رقم`)
+    .setColor('GREEN')
+
+var channel =member.guild.channels.find('name', 'welcome')
+if (!channel) return;
+channel.send({embed : embed});
+});
+
 //MHSTR END NOW THIS IS END
 client.login(process.env.BOT_TOKEN);
