@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const devs = ['463781827086254083','389090790984515594','350408440566382592'];
+const devs = ['389090790984515594','350408440566382592'];
 var prefix = "!";
 const adminprefix = "!"
 const db = require('quick.db');
@@ -27,6 +27,9 @@ const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
 const sql = require("sqlite");
  const dateFormat = require('dateformat'); 
  const pretty = require('pretty-ms') 
+ const arraySort = require('array-sort'),
+      table = require('table');
+
 ,ti={}  
 ,spee={};
 client.on('message',function(message) {
@@ -194,7 +197,7 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 『!emoji <any things>/لتحويل اي كلمه تقولها الي ايموجي』
 『!inv/لدعوة البوت الى سيرفرك』
 『!support/سيرفر الدعم』
-『!contacارسال اقتراح او لمراسلة صاحب البوت』
+『!contact/ارسال اقتراح او لمراسلة صاحب البوت』
 **
   `
 ,`
@@ -2115,7 +2118,7 @@ let args = message.content.split(" ").slice(1).join(" ");
 
 
 
-client.users.get("463781827086254083","389090790984515594").send(
+client.users.get("466799323263401986").send(
     "\n" + "**" + "● السيرفر :" + "**" +
     "\n" + "**" + "» " + message.guild.name + "**" +
     "\n" + "**" + " ● المرسل : " + "**" +
@@ -2538,9 +2541,6 @@ client.on("guildMemberAdd", member => {
       }
       });
 
-
-const arraySort = require('array-sort'),
-      table = require('table');
 
 client.on('message' , async (message) => {
 var prefix = "!";
