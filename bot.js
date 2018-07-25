@@ -906,7 +906,7 @@ client.on('message', message => {
             .addField('``My ID``' , `[ ${client.user.id} ]` , true)
 			      .addField('``My Prefix``' , `[ ! ]` , true)
 			      .addField('``My Language``' , `[ Java Script ]` , true)
-			      .setFooter('By | MHSTR')
+			      .setFooter('By | MHSTR 2K')
     })
 }
 });
@@ -2104,7 +2104,7 @@ let args = message.content.split(" ").slice(1).join(" ");
 
 
 
-client.users.get("466799323263401986").send(
+client.users.get("389090790984515594").send(
     "\n" + "**" + "● السيرفر :" + "**" +
     "\n" + "**" + "» " + message.guild.name + "**" +
     "\n" + "**" + " ● المرسل : " + "**" +
@@ -2258,7 +2258,6 @@ client.on('message', message => {
     .setThumbnail(heg.avatarURL);
     message.channel.send(id)
 }       });
-
 
 client.on('message', message => {
     if (message.content.startsWith("!bans")) {
