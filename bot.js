@@ -2279,7 +2279,6 @@ client.on('message', message => {
      message.channel.sendEmbed(embed);
        }
    });
- 
 client.on('message', message => {
     if (message.content.startsWith("!avatar")) {
 if(!message.channel.guild) return;
@@ -2426,7 +2425,7 @@ client.on("message", (message) => {
 });  
 
 const sWlc = {}
-const premium = ['463781827086254083', '', '', '']
+const premium = ['389090790984515594']
 client.on('message', message => {
 var prefix = "!";
 if(message.channel.type === "dm") return;
