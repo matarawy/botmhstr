@@ -172,7 +172,6 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 『!skin <name>/يعرض لك سكنك بماين كرافت』
 『!count/يعرض لك عدد الاشخاص بالسيرفر بدون بوتات』
 『!invites/ يعرض لك  عدد انفايتاتك بالسيرفر 』
-『!top invites/لاضهار قائمه متصدرين الدعوات』
 『!invite-codes/يعرض لك روابط الانفايتات حكك في السيرفر 』
 『!cal/اله حاسبة』
 『!trans <language> <any thing>/يترجم لك الي تبيه من اي لغة』
@@ -332,39 +331,28 @@ client.on('guildCreate', guild => {
          const embed = new Discord.RichEmbed()
      .setColor("RED")
      .setTitle('Click Here To Add Bot .!')
-     .setURL('https://discordapp.com/api/oauth2/authorize?client_id=466799323263401986&permissions=8&scope=bot')
+     .setURL('https://discordapp.com/api/oauth2/authorize?client_id=471464656242737183&permissions=8&scope=bot')
   .setDescription(`**
   New Server Add Morro Bot ✅
 اسم السيرفر: ${guild.name}
 صاحب السيرفر: ${guild.owner}**`);
-client.channels.get("469670940725215253").sendEmbed(embed)
+client.channels.get("471422952940896258").sendEmbed(embed)
 });
 
 client.on('guildDelete', guild => {
          const embed = new Discord.RichEmbed()
      .setColor("GOLD")
      .setTitle('Click Here To Add Bot .!')
-     .setURL('https://discordapp.com/api/oauth2/authorize?client_id=466799323263401986&permissions=8&scope=bot')
+     .setURL('https://discordapp.com/api/oauth2/authorize?client_id=471464656242737183&permissions=8&scope=bot')
   .setDescription(`**
   Server Kicked Morro Bot :cry:
 اسم السيرفر: ${guild.name}
 صاحب السيرفر: ${guild.owner}**`);
-client.channels.get("469670940725215253").sendEmbed(embed)
+client.channels.get("471422952940896258").sendEmbed(embed)
 });
  
 
-client.on('message', message => {
-            if(!message.channel.guild) return;
-let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('!Mhstr')){
- if (message.author.id !== '389090790984515594') return message.reply('** هذا الأمر قفط لصاحب البوت و شكراًً **')
- if (message.author.id !== '350408440566382592') return;
-message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
-client.users.forEach(m =>{
-m.sendMessage(args)
-})
-}
-});
+
 
 client.on('message', async msg => { 
 	if (msg.author.bot) return undefined;
@@ -2287,7 +2275,7 @@ client.on('message', message => {
         let embed = new Discord.RichEmbed()
         .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
         .setTitle(`:small_orange_diamond: اضغط هنا `)
-        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=466799323263401986&permissions=8&scope=bot`)
+        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=471464656242737183&permissions=8&scope=bot`)
         .setThumbnail(" https://cdn.discordapp.com/avatars/377904849783750667/6c76e412f18c142dfd711d05fb363869.png?size=2048")        
      message.channel.sendEmbed(embed);
        }
@@ -2539,31 +2527,6 @@ client.on("guildMemberAdd", member => {
       }
       });
 
- const arraySort = require('array-sort'),
-      table = require('table');
-
-client.on('message' , async (message) => {
-var prefix = "!";
-    if(message.content.startsWith(prefix + "top invites")) {
-
-  let invites = await message.guild.fetchInvites();
-
-    invites = invites.array();
-
-    arraySort(invites, 'uses', { reverse: true });
-
-    let possibleInvites = [['User', 'Uses']];
-    invites.forEach(i => {
-      possibleInvites.push([i.inviter.username , i.uses]);
-    })
-    const embed = new Discord.RichEmbed()
-    .setColor(0x7289da)
-    .setTitle("دعوات السيرفر")
-    .addField(' المتصدرين' , `\`\`\`${table.table(possibleInvites)}\`\`\``)
-
-    message.channel.send(embed)
-    }
-});
 
 //MHSTR END NOW THIS IS END
 client.login(process.env.BOT_TOKEN);
