@@ -393,8 +393,7 @@ client.on('message', msg => {
          const embed = new Discord.RichEmbed()
      .setColor("RED")
      .setTitle('Click Here To Add Bot .!')
-     .setURL('https://discordapp.com/oauth2/authorize?client_id=471464656242737183&permissions=2117598449&scope=bot
-')
+     .setURL('https://discordapp.com/oauth2/authorize?client_id=471464656242737183&permissions=2117598449&scope=bot ')
   .setDescription(`**
   New Server Add Morro Bot ✅
 اسم السيرفر: ${guild.name}
@@ -406,7 +405,7 @@ client.on('guildDelete', guild => {
          const embed = new Discord.RichEmbed()
      .setColor("GOLD")
      .setTitle('Click Here To Add Bot .!')
-     .setURL('https://discordapp.com/oauth2/authorize?client_id=471464656242737183&permissions=2117598449&scope=bot')
+     .setURL(' https://discordapp.com/oauth2/authorize?client_id=471464656242737183&permissions=2117598449&scope=bot ')
   .setDescription(`**
   Server Kicked Morro Bot :cry:
 اسم السيرفر: ${guild.name}
