@@ -126,6 +126,24 @@ client.on('message', message => {
       message.author.sendEmbed(Embed11)
     }
 });
+client.on("ready", async  => {
+setInterval(function(){
+client.channels.find('id', '472527778546450452').setName("W");
+client.channels.find('id', '472527778546450452').setName("We");
+client.channels.find('id', '472527778546450452').setName("Wel");
+client.channels.find('id', '472527778546450452').setName("Welc");
+client.channels.find('id', '472527778546450452').setName("Welco");
+client.channels.find('id', '472527778546450452').setName("Welcom");
+client.channels.find('id', '472527778546450452').setName("Welcome");
+client.channels.find('id', '472527778546450452').setName("Welcome T");
+client.channels.find('id', '472527778546450452').setName("Welcome To");
+client.channels.find('id', '472527778546450452').setName("Welcome To R");
+client.channels.find('id', '472527778546450452').setName("Welcome To Ri");
+client.channels.find('id', '472527778546450452').setName("Welcome To Riv");
+client.channels.find('id', '472527778546450452').setName("Welcome To Riva");
+client.channels.find('id', '472527778546450452').setName("Welcome To Rival");
+  }, 3000);
+});
 client.on('message', message => {
 if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send The Help In DMS // Code By NotGucci
     let pages = [`
