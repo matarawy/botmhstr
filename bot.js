@@ -2619,8 +2619,7 @@ client.channels.find('id', '472503640154963968').setName("Welcome To H");
 client.channels.find('id', '472503640154963968').setName("Welcome To Ha");
 client.channels.find('id', '472503640154963968').setName("Welcome To Hal");
 client.channels.find('id', '4472503640154963968').setName("Welcome To Halo");
-client.channels.find('id', '472503640154963968').setName("Welcome To Halos");
-	client.channels.find('id', '472503640154963968').setName("Welcome To Halos7");
+client.channels.find('id', '472503640154963968').setName("Welcome To Halos7");
   }, 3000);
 });
 //MHSTR END NOW THIS IS END
