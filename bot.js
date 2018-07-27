@@ -2242,7 +2242,7 @@ client.on('message', message => {
 		     	var prefix ="!";
                 if(message.content === prefix + "inv") {
                     let embed = new Discord.RichEmbed ()
-                    embed.setTitle("**:arrow_right: Invite Morro Bot!**")
+                    embed.setTitle("**:arrow_right: Invite Sliver Bot!**")
                     .setURL("https://discordapp.com/oauth2/authorize?client_id=471464656242737183&permissions=2080898225&scope=bot");
                    message.channel.sendEmbed(embed);
                   }
