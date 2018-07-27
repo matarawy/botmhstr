@@ -91,7 +91,7 @@ ${users.join('\n')}
 
 client.on('message', message => {
       if (!devs.includes(message.author.id)) return;
-  if (message.content.startsWith(adminprefix + 'Morro')) {
+  if (message.content.startsWith(adminprefix + 'sliver')) {
     if (!devs.includes(message.author.id)) return; 
 let args = message.content.split(' ').slice(1).join(' ');
 
@@ -302,9 +302,9 @@ client.on('message', msg => {
          const embed = new Discord.RichEmbed()
      .setColor("RED")
      .setTitle('Click Here To Add Bot .!')
-     .setURL('https://discordapp.com/oauth2/authorize?client_id=471464656242737183&permissions=2117598449&scope=bot ')
+     .setURL('https://discordapp.com/api/oauth2/authorize?client_id=471464656242737183&permissions=2080898225&scope=bot ')
   .setDescription(`**
-  New Server Add Morro Bot ✅
+  New Server Add sliver Bot ✅
 اسم السيرفر: ${guild.name}
 صاحب السيرفر: ${guild.owner}**`);
 client.channels.get("472180208913481728").sendEmbed(embed)
@@ -314,9 +314,9 @@ client.on('guildDelete', guild => {
          const embed = new Discord.RichEmbed()
      .setColor("GOLD")
      .setTitle('Click Here To Add Bot .!')
-     .setURL(' https://discordapp.com/oauth2/authorize?client_id=471464656242737183&permissions=2117598449&scope=bot ')
+     .setURL(' https://discordapp.com/api/oauth2/authorize?client_id=471464656242737183&permissions=2080898225&scope=bot ')
   .setDescription(`**
-  Server Kicked Morro Bot :cry:
+  Server Kicked sliver Bot :cry:
 اسم السيرفر: ${guild.name}
 صاحب السيرفر: ${guild.owner}**`);
 client.channels.get("472180208913481728").sendEmbed(embed)
@@ -634,7 +634,7 @@ client.on('message', message => {
 var embed = new Discord.RichEmbed()
 .setColor('RANDOM')
  .setThumbnail(message.author.avatarURL) 
-.addField('Morro BOT' ,
+.addField('sliver BOT' ,
 `${Za7f[Math.floor(Math.random() * Za7f.length)]}`)
 message.channel.sendEmbed(embed);
 console.log('[38ab] Send By: ' + message.author.username)
@@ -866,7 +866,7 @@ client.on('message', message => {
             .setAuthor(client.user.username,client.user.avatarURL)
             .setThumbnail(client.user.avatarURL)
             .setColor('RANDOM')
-            .setTitle('``INFO Morro Bot`` ')
+            .setTitle('``INFO sliver Bot`` ')
             .addField('``My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
             .addField('``RAM Usage``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
             .addField('``servers``', [client.guilds.size], true)
@@ -876,7 +876,7 @@ client.on('message', message => {
             .addField('``My ID``' , `[ ${client.user.id} ]` , true)
 			      .addField('``My Prefix``' , `[ ! ]` , true)
 			      .addField('``My Language``' , `[ Java Script ]` , true)
-			      .setFooter('By | MHSTR 2K')
+			      .setFooter('By | MHSTR 2K,leader.ayman')
     })
 }
 });
@@ -1080,7 +1080,7 @@ client.on('message', message => {
     if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
   if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
     let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
-    let copy = "Morro";
+    let copy = "sliver bot";
     let request = `Requested By ${message.author.username}`;
     if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
     msg.react('✅')
@@ -1975,7 +1975,7 @@ const cuttweet = [     'كت تويت ‏| تخيّل لو أنك سترسم ش�
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
    .setThumbnail(message.author.avatarURL) 
- .addField('Morro Bot' ,
+ .addField('sliver Bot' ,
   `${cuttweet[Math.floor(Math.random() * cuttweet.length)]}`)
   message.channel.sendEmbed(embed);
   console.log('[id] Send By: ' + message.author.username)
@@ -2224,7 +2224,7 @@ client.on('message', message => {
     .setColor("#707070")
     .addField(': دخولك لديسكورد قبل', `${moment(heg.createdTimestamp).format('YYYY/M/D HH:mm:ss')} **\n** \`${moment(heg.createdTimestamp).fromNow()}\`` ,true) 
     .addField(': انضمامك لسيرفر قبل', `${moment(h.joinedAt).format('YYYY/M/D HH:mm:ss')} \n \`${moment(h.joinedAt).fromNow()}\``, true)               
-    .setFooter(`Morro Bot`, 'https://images-ext-2.discordapp.net/external/JpyzxW2wMRG2874gSTdNTpC_q9AHl8x8V4SMmtRtlVk/https/orcid.org/sites/default/files/files/ID_symbol_B-W_128x128.gif')                                 
+    .setFooter(`sliver Bot`, 'https://images-ext-2.discordapp.net/external/JpyzxW2wMRG2874gSTdNTpC_q9AHl8x8V4SMmtRtlVk/https/orcid.org/sites/default/files/files/ID_symbol_B-W_128x128.gif')                                 
     .setThumbnail(heg.avatarURL);
     message.channel.send(id)
 }       });
@@ -2243,7 +2243,7 @@ client.on('message', message => {
                 if(message.content === prefix + "inv") {
                     let embed = new Discord.RichEmbed ()
                     embed.setTitle("**:arrow_right: Invite Morro Bot!**")
-                    .setURL("https://discordapp.com/oauth2/authorize?client_id=471464656242737183&permissions=2117598449&scope=bot");
+                    .setURL("https://discordapp.com/oauth2/authorize?client_id=471464656242737183&permissions=2080898225&scope=bot");
                    message.channel.sendEmbed(embed);
                   }
 });
@@ -2505,11 +2505,11 @@ client.channels.find('id', '472190387394707476').setName("Welcom");
 client.channels.find('id', '472190387394707476').setName("Welcome");
 client.channels.find('id', '472190387394707476').setName("Welcome T");
 client.channels.find('id', '472190387394707476').setName("Welcome To");
-client.channels.find('id', '472190387394707476').setName("Welcome To M");
-client.channels.find('id', '472190387394707476').setName("Welcome To Mo");
-client.channels.find('id', '472190387394707476').setName("Welcome To Mor");
-client.channels.find('id', '472190387394707476').setName("Welcome To Morr");
-client.channels.find('id', '472190387394707476').setName("Welcome To Morro");
+client.channels.find('id', '472190387394707476').setName("Welcome To S");
+client.channels.find('id', '472190387394707476').setName("Welcome To Sl");
+client.channels.find('id', '472190387394707476').setName("Welcome To Sli");
+client.channels.find('id', '472190387394707476').setName("Welcome To Sliv");
+client.channels.find('id', '472190387394707476').setName("Welcome To Sliver");
   }, 3000);
 });
 //MHSTR END NOW THIS IS END
