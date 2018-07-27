@@ -1132,24 +1132,7 @@ client.on('message', msg => {
     }
 };
 });
-client.on("ready", async  => {
-setInterval(function(){
-client.channels.find('id', '472503640154963968').setName("W");
-client.channels.find('id', '472503640154963968').setName("We");
-client.channels.find('id', '472503640154963968').setName("Wel");
-client.channels.find('id', '472503640154963968').setName("Welc");
-client.channels.find('id', '472503640154963968').setName("Welco");
-client.channels.find('id', '472503640154963968').setName("Welcom");
-client.channels.find('id', '472503640154963968').setName("Welcome");
-client.channels.find('id', '472503640154963968').setName("Welcome T");
-client.channels.find('id', '472503640154963968').setName("Welcome To");
-client.channels.find('id', '472503640154963968').setName("Welcome To H");
-client.channels.find('id', '472503640154963968').setName("Welcome To Ha");
-client.channels.find('id', '472503640154963968').setName("Welcome To Hal");
-client.channels.find('id', '472503640154963968').setName("Welcome To Halo");
-client.channels.find('id', '472503640154963968').setName("Welcome To Halos7");
-  }, 3000);
-});
+
 client.on('message', message => { 
 	var prefix = "!";
  let args = message.content.split(' ').slice(1);
