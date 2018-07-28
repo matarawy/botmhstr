@@ -2586,25 +2586,6 @@ client.on("guildMemberAdd", member => {
       }
       });
 
-client.on("ready", async  => {
-setInterval(function(){
-client.channels.find('id', '472190387394707476').setName("W");
-client.channels.find('id', '472190387394707476').setName("We");
-client.channels.find('id', '472190387394707476').setName("Wel");
-client.channels.find('id', '472190387394707476').setName("Welc");
-client.channels.find('id', '472190387394707476').setName("Welco");
-client.channels.find('id', '472190387394707476').setName("Welcom");
-client.channels.find('id', '472190387394707476').setName("Welcome");
-client.channels.find('id', '472190387394707476').setName("Welcome T");
-client.channels.find('id', '472190387394707476').setName("Welcome To");
-client.channels.find('id', '472190387394707476').setName("Welcome To S");
-client.channels.find('id', '472190387394707476').setName("Welcome To Sl");
-client.channels.find('id', '472190387394707476').setName("Welcome To Sli");
-client.channels.find('id', '472190387394707476').setName("Welcome To Sliv");
-client.channels.find('id', '472190387394707476').setName("Welcome To Sliver");
-  }, 3000);
-});
-
 
 
 
